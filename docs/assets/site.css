@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -82,6 +83,7 @@ a {
 .header-inner,
 .section-inner {
   width: min(1180px, 100%);
+  min-width: 0;
   margin: 0 auto;
 }
 
@@ -106,13 +108,17 @@ p {
 }
 
 h1 {
-  max-width: 850px;
+  max-width: 1180px;
   margin: 0.65rem auto 1rem;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.65rem, 6vw, 5.4rem);
+  font-size: clamp(1.9rem, 3.2vw, 3rem);
   font-weight: 700;
-  letter-spacing: -0.045em;
-  line-height: 1.02;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.title-line {
+  display: block;
 }
 
 .lede {
@@ -173,6 +179,64 @@ h1 {
   font-size: clamp(2rem, 4vw, 3.35rem);
   letter-spacing: -0.035em;
   line-height: 1.08;
+}
+
+.section-heading.section-heading-single {
+  grid-template-columns: 1fr;
+}
+
+.abstract-copy {
+  max-width: 980px;
+  margin: 0 auto;
+  color: #33415a;
+  font-size: clamp(1rem, 1.45vw, 1.12rem);
+  line-height: 1.82;
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+.abstract-copy p {
+  margin-bottom: 1.15rem;
+}
+
+.abstract-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.paper-figure {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.paper-figure-media {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: clamp(0.6rem, 1.5vw, 1.15rem);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.paper-figure img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.paper-figure figcaption {
+  max-width: 1050px;
+  margin: 1rem auto 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  text-align: center;
 }
 
 .section-summary {
@@ -472,6 +536,21 @@ video {
   .section-heading {
     grid-template-columns: 1fr;
     gap: 0.8rem;
+  }
+
+  .abstract-copy {
+    width: 100%;
+    text-align: left;
+  }
+
+  .paper-figure-media {
+    padding: 0.4rem;
+    border-radius: 0.75rem;
+  }
+
+  .paper-figure figcaption {
+    font-size: 0.82rem;
+    text-align: left;
   }
 
   .real-grid,

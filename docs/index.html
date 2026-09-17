@@ -3,20 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Real-world and simulation demonstration videos for the AED supplementary materials.">
-    <title>AED Supplementary Materials · Demonstrations</title>
+    <meta name="description" content="Project page for Learning Skills from Historical Action Trajectories: Action Experience Dictionary for World Action Models.">
+    <title>Learning Skills from Historical Action Trajectories | AED</title>
     <link rel="stylesheet" href="assets/site.css">
     <script src="assets/site.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to demonstrations</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="page-header">
       <div class="header-inner">
-        <p class="eyebrow">AED · Supplementary Materials</p>
-        <h1>Demonstration Gallery</h1>
-        <p class="lede">Qualitative results across real-world robotic manipulation and three simulation evaluation benchmarks.</p>
-        <nav class="jump-links" aria-label="Demonstration sections">
+        <p class="eyebrow">AED · Project Page</p>
+        <h1><span class="title-line">Learning Skills from Historical Action Trajectories:</span><span class="title-line">Action Experience Dictionary for World Action Models</span></h1>
+        <nav class="jump-links" aria-label="Project page sections">
           <a href="#real-robot">Real Robot</a>
           <a href="#simulation">Simulation</a>
         </nav>
@@ -24,7 +23,55 @@
     </header>
 
     <main id="main-content">
-      <section class="content-section is-white" id="real-robot" aria-labelledby="real-title">
+      <section class="content-section is-white" id="abstract" aria-labelledby="abstract-title">
+        <div class="section-inner">
+          <div class="section-heading section-heading-single">
+            <div>
+              <p class="section-kicker">Paper summary</p>
+              <h2 id="abstract-title">Abstract</h2>
+            </div>
+          </div>
+          <div class="abstract-copy">
+            <p>World Action Models (WAMs) couple visual dynamics prediction with action generation, yet they do not explicitly support the reuse of action experience across manipulation tasks. Furthermore, existing WAMs struggle to capture underlying cross-task semantic relationships that could guide target action prediction, as redundant background elements interfere with the extraction of key visual information. To address these challenges, we develop a novel Action Experience Dictionary (AED) that encodes historical physical action trajectories into shared action embeddings to support skill reuse and model cross-task relationships. Specifically, we first aggregate historical actions to align with visual observations and retrieve action embeddings from the AED using a pretrained action tokenizer. Subsequently, we visually condition the pooled embeddings through cross-attention and prepend them to noisy action tokens, providing interaction context and action intent for prediction. To encourage action-related motion modeling and reduce reliance on irrelevant background cues, we introduce a motion-aware transition loss that supervises visual feature change prediction over random temporal intervals. Experiments on simulation benchmarks and in real-world cross-embodiment settings demonstrate that our model outperforms the baselines.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="motivation" aria-labelledby="motivation-title">
+        <div class="section-inner">
+          <div class="section-heading section-heading-single">
+            <div>
+              <p class="section-kicker">Why action experience matters</p>
+              <h2 id="motivation-title">Motivation</h2>
+            </div>
+          </div>
+          <figure class="paper-figure">
+            <div class="paper-figure-media">
+              <img src="assets/images/motivation.png" alt="Illustration of reusable action skills and the similarity structure of action experience embeddings">
+            </div>
+            <figcaption>Illustration of the Action Experience Dictionary. (a) Reusable action skills across tasks. (b) Cosine similarity of action experience embeddings without visual conditioning. (c) Corresponding gripper height (gray) and step-wise changes (green); background color indicates the proportion of high-frequency energy in each action chunk. Higher aggregated embedding similarity correlates with a larger proportion of high-frequency energy.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="content-section is-white" id="architecture" aria-labelledby="architecture-title">
+        <div class="section-inner">
+          <div class="section-heading section-heading-single">
+            <div>
+              <p class="section-kicker">Method</p>
+              <h2 id="architecture-title">Overview of Architecture</h2>
+            </div>
+          </div>
+          <figure class="paper-figure paper-figure-wide">
+            <div class="paper-figure-media">
+              <img src="assets/images/architecture-overview.png" alt="Architecture of the Action Experience Dictionary world action model">
+            </div>
+            <figcaption>Overview of the proposed framework, including action experience retrieval and conditioning, the video and action experts, and the motion-aware transition objective.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="content-section" id="real-robot" aria-labelledby="real-title">
         <div class="section-inner">
           <div class="section-heading">
             <div>
@@ -148,7 +195,7 @@
         </div>
       </section>
 
-      <section class="content-section" id="simulation" aria-labelledby="simulation-title">
+      <section class="content-section is-white" id="simulation" aria-labelledby="simulation-title">
         <div class="section-inner">
           <div class="section-heading">
             <div>
@@ -278,6 +325,6 @@
       </section>
     </main>
 
-    <footer class="page-footer">AED Supplementary Materials · Demonstration Gallery</footer>
+    <footer class="page-footer">AED · Project Page</footer>
   </body>
 </html>
