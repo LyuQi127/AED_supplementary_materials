@@ -248,17 +248,62 @@ h1 {
   color: var(--muted);
 }
 
+.robot-platform {
+  margin-top: 2.25rem;
+}
+
+.robot-platform-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.robot-platform-heading h3 {
+  margin: 0.25rem 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 2.6vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.robot-setting-badge {
+  display: inline-flex;
+  margin-top: 0.55rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  color: var(--blue);
+  background: var(--blue-soft);
+  font-size: 0.72rem;
+  font-weight: 750;
+  line-height: 1.35;
+  letter-spacing: 0.09em;
+}
+
+.robot-platform-heading > span {
+  color: var(--muted);
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.real-task-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+  margin-top: 1.25rem;
+}
+
 .real-task {
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
   padding: 1.35rem;
   border: 1px solid var(--line);
   border-radius: 1rem;
   background: var(--paper);
   box-shadow: 0 9px 28px rgba(28, 43, 70, 0.055);
-}
-
-.real-task + .real-task {
-  margin-top: 1.6rem;
 }
 
 .real-task-header {
@@ -281,8 +326,10 @@ h1 {
 
 .real-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
+  width: 100%;
+  margin-top: auto;
 }
 
 .video-card {
@@ -557,7 +604,6 @@ video {
     text-align: left;
   }
 
-  .real-grid,
   .sim-grid.grid-two,
   .sim-grid.grid-three,
   .sim-grid.grid-four {
