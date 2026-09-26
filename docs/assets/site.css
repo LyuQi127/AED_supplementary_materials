@@ -491,6 +491,12 @@ h1 {
   background: var(--paper);
 }
 
+.spirit-task-grid > .real-task-wide .training-scene-card {
+  width: min(100%, 40rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .training-scene-card img {
   display: block;
   width: 100%;
