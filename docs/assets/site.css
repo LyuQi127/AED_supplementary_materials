@@ -482,6 +482,10 @@ h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.real-grid-four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .training-scene-card {
   overflow: hidden;
   width: 100%;
@@ -489,12 +493,6 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 0.8rem;
   background: var(--paper);
-}
-
-.spirit-task-grid > .real-task-wide .training-scene-card {
-  width: min(100%, 40rem);
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .training-scene-card img {
@@ -511,6 +509,19 @@ h1 {
 .spirit-task-grid > .real-task:not(.real-task-wide) .training-scene-card img {
   aspect-ratio: 2.2 / 1;
   object-fit: contain;
+}
+
+.real-grid-four .training-scene-card {
+  margin: 0;
+}
+
+.real-grid-four .training-scene-card img {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.real-grid-four .video-frame {
+  min-height: 0;
 }
 
 .training-scene-card figcaption {
@@ -816,6 +827,10 @@ video {
   .sim-grid.grid-two,
   .sim-grid.grid-three,
   .sim-grid.grid-four {
+    grid-template-columns: 1fr;
+  }
+
+  .real-grid-four {
     grid-template-columns: 1fr;
   }
 
