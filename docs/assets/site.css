@@ -482,6 +482,40 @@ h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.training-scene-card {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 0 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.8rem;
+  background: var(--paper);
+}
+
+.training-scene-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #eef2f7;
+}
+
+.spirit-task-grid > .real-task:not(.real-task-wide) .real-task-header {
+  min-height: 8rem;
+}
+
+.spirit-task-grid > .real-task:not(.real-task-wide) .training-scene-card img {
+  aspect-ratio: 2.2 / 1;
+  object-fit: contain;
+}
+
+.training-scene-card figcaption {
+  padding: 0.68rem 0.8rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .video-card {
   overflow: hidden;
   margin: 0;
@@ -787,6 +821,14 @@ video {
     grid-template-columns: 1fr;
     gap: 0.25rem;
     padding: 0.55rem 0.25rem 1rem;
+  }
+
+  .spirit-task-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spirit-task-grid > .real-task:not(.real-task-wide) .real-task-header {
+    min-height: auto;
   }
 
   .perturbation-row-heading {
