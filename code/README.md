@@ -1,7 +1,3 @@
-# Action Experience Model
-
-The implementation follows the paper architecture: interval-aligned history actions are encoded with a learned action dictionary, history latents are compressed into visual memory, the resulting prefix conditions a joint video-action transformer, and a transition predictor supplies the auxiliary visual-motion objective during training.
-
 ## Repository structure
 
 ```text
