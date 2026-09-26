@@ -121,6 +121,31 @@ h1 {
   display: block;
 }
 
+.hero-video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.hero-video-card {
+  overflow: hidden;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  background: #0d1119;
+  box-shadow: 0 12px 30px rgba(28, 43, 70, 0.1);
+}
+
+.hero-video-frame {
+  min-height: 0;
+}
+
+.hero-video-frame video {
+  aspect-ratio: 16 / 9;
+}
+
 .project-links {
   display: flex;
   flex-wrap: wrap;
@@ -779,6 +804,10 @@ video {
 @media (max-width: 720px) {
   .page-header {
     padding: 4rem 1rem 3.5rem;
+  }
+
+  .hero-video-grid {
+    grid-template-columns: 1fr;
   }
 
   .content-section {
