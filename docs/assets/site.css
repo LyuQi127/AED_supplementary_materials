@@ -121,6 +121,34 @@ h1 {
   display: block;
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 1.65rem;
+}
+
+.project-links a {
+  min-width: 7.5rem;
+  padding: 0.62rem 1.15rem;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  color: #fff;
+  background: var(--ink);
+  font-size: 0.93rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
+  border-color: var(--blue);
+  background: var(--blue);
+  transform: translateY(-1px);
+}
+
 .lede {
   max-width: 720px;
   margin: 0 auto;
